@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+  Integral · Forg
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Forg">
+<meta name="description" content="O Problema da Área Um dos problemas que deram origem ao Cálculo Diferencial e Integral consiste em encontrar a área da região limitada pelo gráfico de uma função positiva $f: [a, b] \rightarrow \mathbb{R}$, o eixo $x$ e as retas $x = a$ e $x = b$.
+A ideia para resolver esse problema é dividir o intervalo $[a, b]$ em $n$ subintervalos de mesmo comprimento usando os pontos $x_1 = a &lt; x_2 &lt; .">
+<meta name="keywords" content="">
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Integral"/>
+<meta name="twitter:description" content="O Problema da Área Um dos problemas que deram origem ao Cálculo Diferencial e Integral consiste em encontrar a área da região limitada pelo gráfico de uma função positiva $f: [a, b] \rightarrow \mathbb{R}$, o eixo $x$ e as retas $x = a$ e $x = b$.
+A ideia para resolver esse problema é dividir o intervalo $[a, b]$ em $n$ subintervalos de mesmo comprimento usando os pontos $x_1 = a &lt; x_2 &lt; ."/>
+
+<meta property="og:title" content="Integral" />
+<meta property="og:description" content="O Problema da Área Um dos problemas que deram origem ao Cálculo Diferencial e Integral consiste em encontrar a área da região limitada pelo gráfico de uma função positiva $f: [a, b] \rightarrow \mathbb{R}$, o eixo $x$ e as retas $x = a$ e $x = b$.
+A ideia para resolver esse problema é dividir o intervalo $[a, b]$ em $n$ subintervalos de mesmo comprimento usando os pontos $x_1 = a &lt; x_2 &lt; ." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/integral/" /><meta property="article:section" content="posts" />
+
+
+
+
+
+
+
+<link rel="canonical" href="/posts/integral/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.min.e1bdf152d93b060b06ba5d496486ed9c201a8b95d335e035beb5faebe3b61cad.css" integrity="sha256-4b3xUtk7BgsGul1JZIbtnCAai5XTNeA1vrX66&#43;O2HK0=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/">
+      Forg
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/about/">About</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="/posts/integral/">
+              Integral
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="0001-01-01T00:00:00Z">
+                January 1, 0001
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              One-minute read
+            </span>
+          </div>
+          
+          
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        
+<div id="outline-container-headline-1" class="outline-2">
+<h2 id="headline-1">
+O Problema da Área
+</h2>
+<div id="outline-text-headline-1" class="outline-text-2">
+<p>Um dos problemas que deram origem ao Cálculo Diferencial e Integral consiste em encontrar a área da região limitada pelo gráfico de uma função positiva $f: [a, b] \rightarrow \mathbb{R}$, o eixo $x$ e as retas $x = a$ e $x = b$.</p>
+<div id="fig1" style="margin: 0 auto;"></div>
+<script type="module">
+    import {PlotArea, generatePoints} from '/js/plot.js';
+    const pa = new PlotArea({
+    container: "#fig1",
+    width: 400,
+    height: 400,
+    });
+
+    const f = x => x**2 + 0.2;
+    const interval = [0.1, 0.9]
+
+    pa.plotRegion("f-region", f, interval);
+    pa.plot("f", f, interval);
+</script>
+<p>
+A ideia para resolver esse problema é dividir o intervalo $[a, b]$ em $n$ subintervalos de mesmo comprimento usando os pontos $x_1 = a &lt; x_2 &lt; ... &lt;x_{n+1} = b$, onde $x_{i+1} - x_i = \frac{b - a}{n}$ e $i = 1, 2, ..., n$. Em seguida, consideramos os retângulos de base $[x_i, x_{i+1}]$ e altura $f(x_i)$. A soma das áreas desses retângulos é
+$$
+S = \sum_{i = 1}^{n} \frac{b - a}{n} f(x_i)
+$$</p>
+<p>
+Nossa intuição nos diz que, a medida que aumentamos o número de retângulos, S fica cada vez mais próxima de A (e de nenhum outro número!). De modo que podemos estimar o valor de A com qualquer precisão tomando $n$ suficientemente grande ou até mesmo encontrar seu valor exato analisando o comportamento de S quando $n$ cresce.</p>
+<div id="fig2"  style="margin: 0 auto;"></div>
+<input id="subintervals" type="range" name="subintervals" min="1" max="200">
+<script type="module">
+    import {PlotArea, generatePoints, generateRects} from '/js/plot.js';
+    const pa = new PlotArea({
+    container: "#fig2",
+    width: 400,
+    height: 400,
+    });
+
+    const subIntervalsInput = document.getElementById("subintervals");
+    const f = x => x ** 2 + 0.2;
+    const interval = [0.1, 0.9]
+
+    pa.plotRegion("f-region", f, interval);
+    pa.plot("f", f, interval);
+
+    function update(n){
+        pa.plotPoints("x-axis-points", generatePoints(x => 0, interval, n+1));
+        pa.plotRects("lower-rects", generateRects(interval, n, (a, b) => f(a)));
+    }
+
+    update(parseInt(subIntervalsInput.value));
+
+    subIntervalsInput.oninput = function(){
+        update(parseInt(this.value));
+    }
+</script>
+</div>
+</div>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    integrity="sha384-vKruj+a13U8yHIkAyGgK1J3ArTLzrFGBbBc0tDp4ad/EyewESeXE/Iv67Aj8gKZ0" crossorigin="anonymous">
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.js"
+    integrity="sha384-PwRUT/YqbnEjkZO0zZxNqcxACrXe+j766U2amXcgMg5457rve2Y7I6ZJSm2A0mS4" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/contrib/auto-render.min.js"
+    integrity="sha384-+VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4+/RRE05" crossorigin="anonymous"
+    onload="renderMathInElement(document.body,
+      {
+        delimiters: [
+          {left: '$$', right: '$$', display:true},
+          {left: '$', right: '$', display:false},
+          {left: '\\(', right: '\\)', display: false},
+          {left: '\\[', right: '\\]', display: true}
+        ]
+      }
+    );"></script>
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2024
+     Forg 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
