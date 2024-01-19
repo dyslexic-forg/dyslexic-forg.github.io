@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Forg</title>
+    <link>/</link>
+    <description>Recent content on Forg</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>pt-br</language>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Integral</title>
+      <link>/posts/integral/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>/posts/integral/</guid>
+      <description>O Problema da Área Um dos problemas que deram origem ao Cálculo Diferencial e Integral consiste em encontrar a área da região limitada pelo gráfico de uma função positiva $f: [a, b] \rightarrow \mathbb{R}$, o eixo $x$ e as retas $x = a$ e $x = b$.&#xA;A ideia para resolver esse problema é dividir o intervalo $[a, b]$ em $n$ subintervalos de mesmo comprimento usando os pontos $x_1 = a &amp;lt; x_2 &amp;lt; .</description>
+    </item>
+  </channel>
+</rss>
